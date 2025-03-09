@@ -91,6 +91,34 @@ header {
     flex-wrap: nowrap;
 }
 
+#title img {
+    max-width: 200px;
+}
+
+#title {
+    display: inline-flex;
+    font-size: x-large;
+    font-family: var(--heading-font);
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+/**main**/
+main {
+    background-color: var(--color2);
+    padding: 1rem;   
+}
+
+main div {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    text-align: center; 
+}
+
 /**Footer**/
 footer {
     text-align: center;
@@ -98,3 +126,4 @@ footer {
     background-color: var(--color5);
     color: white;
 }
+

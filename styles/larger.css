@@ -16,3 +16,9 @@
         justify-content: right;
     }
 }
+
+@media screen and (min-width: 800px){
+    main div {
+        grid-template-columns: 1fr 1fr;
+    }
+ }
