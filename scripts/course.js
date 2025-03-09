@@ -77,3 +77,35 @@ const courses = [
         completed: false
     }
 ]
+
+createClassCard(courses);
+
+const allClassLink = document.querySelector("#all")
+const wddClassLink = document.querySelector("#wdd")
+const cseClassLink = document.querySelector("#cse")
+
+allClassLink.addEventListener("click", () => {
+    createClassCard(courses)
+});
+
+wddClassLink.addEventListener("click", () => {
+    createClassCard(courses.filter(courses => courses.subject === 'WDD'))
+});
+
+cseClassLink.addEventListener("click", () => {
+    createClassCard(courses.filter(courses => courses.subject === 'CSE'))
+})
+
+function createClassCard(filteredCourses) {
+    document.querySelector(".courses").innerHTML = "";
+    filteredCourses.forEach(course => {
+        let card = document.createElement("section");
+        let title = document.createElement("h3");
+
+        title.textContent = course.title;
+
+        card.appendChild(title);
+
+        document.querySelector(".courses").appendChild(card);
+    });
+}
