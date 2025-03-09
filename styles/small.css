@@ -1,0 +1,100 @@
+:root {
+    --heading-font: 'Playfair Display', serif;
+    --paragraph-font: 'Titillium Web', serif;
+    --color1: #A4243B;
+    --color2: #D8C99B;
+    --color3: #D8973C;
+    --color4: #BD632F;
+    --color5: #273E47;
+}
+
+/**All**/
+* {
+    text-decoration: none;
+}
+
+p {
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+/**Body**/
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/**Header**/
+#menu {
+    color: white;
+    display: inline-block;
+}
+
+#menu::before {
+	content: "≡";
+    font-size: xx-large;
+}
+
+#menu.show::before {
+	content: "X";
+    font-size: Larger;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    font-size: large;
+}
+
+nav a{
+    color: white;
+    font-family: var(--heading-font);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+	list-style: none;
+	max-width: 800px;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    background-color: var(--color5);
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1;
+    text-align: center;
+    border: solid white;
+}
+
+.navigation.show {
+    display: flex;
+}
+
+header {
+    background-color: var(--color5);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+/**Footer**/
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color5);
+    color: white;
+}
