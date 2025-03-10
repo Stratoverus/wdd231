@@ -23,4 +23,8 @@
     .courses {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #title {
+        flex-direction: row;
+    }
 }

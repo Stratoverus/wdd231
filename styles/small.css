@@ -95,12 +95,13 @@ header {
 }
 
 #title {
-    display: inline-flex;
+    display: flex;
     font-size: x-large;
     font-family: var(--heading-font);
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+    flex-direction: column;
 }
 
 /**main**/
