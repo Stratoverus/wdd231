@@ -119,6 +119,65 @@ main div {
     text-align: center; 
 }
 
+section {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    background-color: #273E47;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.credits {
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter {
+    background-color: #273E47;
+    width: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.courses {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.course-card {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid var(--color5);
+    width: 90%;
+    height: 65px;
+    margin: 20px;
+}
+
+.completed {
+    background-color: var(--color5);
+    color: white;
+}
+
+.not-completed {
+    background-color: var(--color1);
+    color: white;
+}
+
 /**Footer**/
 footer {
     text-align: center;

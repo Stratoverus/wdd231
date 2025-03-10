@@ -98,11 +98,21 @@ cseClassLink.addEventListener("click", () => {
 
 function createClassCard(filteredCourses) {
     document.querySelector(".courses").innerHTML = "";
+
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    document.querySelector(".credits").textContent = `Total Credits: ${totalCredits}`;
     filteredCourses.forEach(course => {
         let card = document.createElement("section");
         let title = document.createElement("h3");
 
         title.textContent = course.title;
+
+        card.classList.add("course-card");
+        if (course.completed) {
+            card.classList.add("completed");
+        } else {
+            card.classList.add("not-completed")
+        }
 
         card.appendChild(title);
 
