@@ -74,6 +74,11 @@ nav a:hover {
     border: solid white;
 }
 
+.navigation a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .navigation.show {
     display: flex;
 }
@@ -149,6 +154,26 @@ section h2 {
     justify-content: center;
     padding: 10px;
     font-weight: bold;
+}
+
+.filter button {
+    background-color: #D8973C;
+    font-weight: bold;
+    border: 2px solid #273E47;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+.filter button:hover {
+    text-decoration: underline;
+    background-color: #D8C99B;
+    cursor: pointer;
+}
+
+.filter button.active {
+    background-color: #D8C99B;
+    font-weight: bolder;
 }
 
 .courses {
