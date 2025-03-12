@@ -1,0 +1,94 @@
+{
+    "companies": [
+      {
+        "name": "Desert Valley Auto Repair",
+        "address": "123 Main St, Apache Junction, AZ 85120",
+        "phone": "(480) 555-1234",
+        "website": "https://desertvalleyautorepair.com",
+        "image": "desert_valley_auto.png",
+        "membership_level": 3,
+        "description": "Reliable auto repair services for all makes and models."
+      },
+      {
+        "name": "Gold Canyon Coffee Co.",
+        "address": "456 Canyon Rd, Apache Junction, AZ 85120",
+        "phone": "(480) 555-5678",
+        "website": "https://goldcanyoncoffee.com",
+        "image": "gold_canyon_coffee.png",
+        "membership_level": 2,
+        "description": "Locally roasted coffee with a cozy cafe atmosphere."
+      },
+      {
+        "name": "Superstition Outdoor Adventures",
+        "address": "789 Adventure Blvd, Apache Junction, AZ 85120",
+        "phone": "(480) 555-2468",
+        "website": "https://superstitionoutdoor.com",
+        "image": "superstition_outdoor.png",
+        "membership_level": 3,
+        "description": "Guided hikes and outdoor tours in the Superstition Mountains."
+      },
+      {
+        "name": "Pioneer Western Wear",
+        "address": "101 Ranch Rd, Apache Junction, AZ 85120",
+        "phone": "(480) 555-1357",
+        "website": "https://pioneerwesternwear.com",
+        "image": "pioneer_western.png",
+        "membership_level": 1,
+        "description": "Authentic western clothing and accessories."
+      },
+      {
+        "name": "Lost Dutchman Brewery",
+        "address": "202 Goldmine St, Apache Junction, AZ 85120",
+        "phone": "(480) 555-9753",
+        "website": "https://lostdutchmanbrewery.com",
+        "image": "lost_dutchman_brewery.png",
+        "membership_level": 2,
+        "description": "Craft beer brewed in the heart of Apache Junction."
+      },
+      {
+        "name": "Apache Junction Farmers Market",
+        "address": "303 Harvest Ln, Apache Junction, AZ 85120",
+        "phone": "(480) 555-8642",
+        "website": "https://ajfarmersmarket.com",
+        "image": "aj_farmers_market.png",
+        "membership_level": 1,
+        "description": "Fresh local produce and handmade goods."
+      },
+      {
+        "name": "Sonoran Pet Grooming",
+        "address": "404 Pet St, Apache Junction, AZ 85120",
+        "phone": "(480) 555-3124",
+        "website": "https://sonoranpetgrooming.com",
+        "image": "sonoran_pet_grooming.png",
+        "membership_level": 3,
+        "description": "Professional pet grooming for dogs and cats."
+      },
+      {
+        "name": "Copper Canyon Art Gallery",
+        "address": "505 Artist Alley, Apache Junction, AZ 85120",
+        "phone": "(480) 555-7890",
+        "website": "https://coppercanyonart.com",
+        "image": "copper_canyon_art.png",
+        "membership_level": 2,
+        "description": "Local artists showcasing paintings, pottery, and crafts."
+      },
+      {
+        "name": "Superstition Valley Insurance",
+        "address": "606 Coverage Ct, Apache Junction, AZ 85120",
+        "phone": "(480) 555-6543",
+        "website": "https://superstitionvalleyinsurance.com",
+        "image": "superstition_insurance.png",
+        "membership_level": 3,
+        "description": "Comprehensive insurance services for individuals and businesses."
+      },
+      {
+        "name": "Mesa Desert Landscaping",
+        "address": "707 Greenway Dr, Apache Junction, AZ 85120",
+        "phone": "(480) 555-4444",
+        "website": "https://mesadesertlandscaping.com",
+        "image": "mesa_desert_landscaping.png",
+        "membership_level": 1,
+        "description": "Desert-friendly landscaping solutions and maintenance."
+      }
+    ]
+  }
