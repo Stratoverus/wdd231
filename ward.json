@@ -1,0 +1,28 @@
+{
+    "wardName" : "Ocotillo",
+    "location" : "Arizona",
+    "members" : [
+        {
+            "name" : "Eberhard",
+            "dateMoved" : 2019,
+            "numberIndividuals" : 4,
+            "visitedByBishopric" : false,
+            "individuals" : [
+                "Keith Eberhard",
+                "Kayla Eberhard",
+                "James Eberhard",
+                "Emma Eberhard"
+            ]
+        },
+        {
+            "name" : "O'Dwyer",
+            "dateMoved" : 2022,
+            "numberIndividuals" : 2,
+            "visitedByBishopric" : true,
+            "individuals" : [
+                "Kyle O'Dwyer",
+                "Amy O'Dwyer"
+            ]
+        }
+    ]
+}

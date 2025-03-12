@@ -6,7 +6,11 @@ hambutton.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop();
+    let currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "") {
+        currentPage = "index.html";
+    }
 
     const pageMap = {
         "index.html": "home",

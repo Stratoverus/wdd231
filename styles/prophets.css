@@ -1,0 +1,18 @@
+#cards {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#cards section {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid var(--color5);
+    background-color: gray;
+}
