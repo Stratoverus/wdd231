@@ -57,8 +57,6 @@ nav a:hover {
 }
 
 .navigation {
-	list-style: none;
-	max-width: 800px;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -66,7 +64,6 @@ nav a:hover {
     top: 100%;
     right: 0;
     width: 100%;
-    z-index: 1;
     text-align: center;
 }
 
@@ -236,4 +233,8 @@ footer {
     background-color: var(--color5);
     color: white;
     display: grid;
+}
+
+.icons a {
+    margin: 0 10px;
 }

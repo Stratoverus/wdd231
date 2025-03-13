@@ -6,7 +6,7 @@
     .navigation {
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 1rem;
         position: static;
         background-color: transparent;
         padding: 0;
