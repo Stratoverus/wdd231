@@ -34,7 +34,7 @@ const displayMembers = (members, view) => {
     
             address.textContent = `${member.address}`;
             phone.textContent = `${member.phone}`;
-            website.textContent = `${member.website}`;
+            website.innerHTML = `<a href="${member.website}" target="_blank">${member.website}</a>`;
     
             logo.setAttribute("src", `images/${member.image}`);
             logo.setAttribute("alt", member.name);

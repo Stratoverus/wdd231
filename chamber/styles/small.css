@@ -44,7 +44,6 @@ body {
 
 nav {
     display: flex;
-    gap: 1rem;
     font-size: large;
 }
 
@@ -62,20 +61,29 @@ nav a:hover {
 	max-width: 800px;
     display: none;
     flex-direction: column;
-    gap: 1rem;
     position: absolute;
-    background-color: var(--color5);
+    background-color: var(--color4);
     top: 100%;
     right: 0;
     width: 100%;
-    padding: 1rem 0;
     z-index: 1;
     text-align: center;
+}
+
+.navigation a {
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid white;
+}
+
+.navigation a:first-child {
+    border-top: 1px solid white;
 }
 
 .navigation a.active {
     font-weight: bold;
     text-decoration: underline;
+    background-color: #240B36;
 }
 
 .navigation.show {
@@ -177,6 +185,14 @@ section img {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
+#members a {
+    color: black;
+}
+
+#members a:hover {
+    text-decoration: underline;
+}
+
 #members.list-view {
     display: flex;
     flex-direction: column;
@@ -200,7 +216,7 @@ section img {
 .list-header {
     font-weight: bold;
     background-color: var(--color3);
-    color: white;
+    color: black;
     padding: 10px;
 }
 
