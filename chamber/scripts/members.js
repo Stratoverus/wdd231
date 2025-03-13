@@ -22,6 +22,17 @@ const displayMembers = (members) => {
         phone.textContent = `${member.phone}`;
         website.textContent = `${member.website}`;
 
-        logo.setAttribute("src", member.)
+        logo.setAttribute("src", `images/${member.image}`);
+        logo.setAttribute("alt", member.name);
+        logo.setAttribute("loading", "lazy");
+        logo.setAttribute("width", 200);
+        logo.setAttribute("height", 150);
+
+        card.appendChild(logo);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
+
+        cards.appendChild(card);
     });
 }
