@@ -13,6 +13,15 @@ getMemberData();
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement("section");
-        let 
+        let logo = document.createElement("img");
+        let address = document.createElement("p");
+        let phone = document.createElement("p");
+        let website = document.createElement("p");
+
+        address.textContent = `${member.address}`;
+        phone.textContent = `${member.phone}`;
+        website.textContent = `${member.website}`;
+
+        logo.setAttribute("src", member.)
     });
 }
