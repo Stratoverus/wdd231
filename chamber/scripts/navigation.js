@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const pageMap = {
         "index.html": "home",
-        "directory.html": "Directory",
-        "join.html": "Join",
-        "directory.html": "Discover",
+        "directory.html": "directory",
+        "join.html": "join",
+        "discover.html": "discover",
     };
 
     if (pageMap[currentPage]) {
