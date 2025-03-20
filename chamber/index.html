@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/filter.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Home Page - Apache Junction Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -40,8 +39,42 @@
         </nav>
     </header>
     <main>
+        <div class="hero">
+            <img src="" alt="Apache Junction Hero">
+            <button id="join">Join</button>
+        </div>
         <h1>Home Page</h1>
-
+        <div class="eventsWeather">
+            <section>
+                <h2>Events</h2>
+                <div class="events">
+                    <!--Events listed here-->
+                </div>
+            </section>
+            <section>
+                <h2>Current Weather</h2>
+                <div class="weather">
+                    <div class="weatherIcon">
+                        <figure>
+                            <img id="weather-icon" src="" alt="">
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+                    <div class="currentDetails">
+                        <!--Current weather details will be here-->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Weather Forecast</h2>
+                <div class="forecastWeather">
+                    <!--Forecast for current day and next two days-->
+                </div>
+            </section>
+        </div>
+        <div class="spotlights">
+            <!--Spotlight cards will be here-->
+        </div>
     </main>
     <footer>
         <div>
