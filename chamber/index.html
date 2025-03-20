@@ -55,13 +55,17 @@
                 <h2>Current Weather</h2>
                 <div class="weather">
                     <div class="weatherIcon">
-                        <figure>
-                            <img id="weather-icon" src="" alt="">
-                            <figcaption></figcaption>
-                        </figure>
+                        <img id="weather-icon" src="" alt="">
                     </div>
                     <div class="currentDetails">
                         <!--Current weather details will be here-->
+                        <span id="current-temp"></span>
+                        <span id="details"></span>
+                        <p>High: <span id="highTemp"></span></p>
+                        <p>Low: <span id="lowTempe"></span></p>
+                        <p>Humidity: <span id="humidity"></span>%</p>
+                        <p>Sunrise: <span id="sunrise"></span>am</p>
+                        <p>Sunset: <span id="sunset"></span>pm</p>
                     </div>
                 </div>
             </section>
@@ -69,6 +73,9 @@
                 <h2>Weather Forecast</h2>
                 <div class="forecastWeather">
                     <!--Forecast for current day and next two days-->
+                    <p>Today: <span id="highTemp"></span></p>
+                    <p id="tomorrowForecast"></p>
+                    <p id="twoDaysForecast"></p>
                 </div>
             </section>
         </div>
