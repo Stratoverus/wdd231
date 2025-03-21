@@ -129,6 +129,10 @@ main nav {
     gap: 50px;
 }
 
+.hero img {
+    width: 100%;
+}
+
 .displayStyle {
     width: auto;
     margin: auto;
@@ -253,6 +257,10 @@ section img {
 .weather {
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+
+#weather-icon {
+    width: 100px;
 }
 
 #current-temp {
