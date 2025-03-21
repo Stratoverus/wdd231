@@ -129,8 +129,29 @@ main nav {
     gap: 50px;
 }
 
+.hero {
+    position: relative;
+}
+
 .hero img {
     width: 100%;
+    height: auto;
+}
+
+#joinButton {
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: var(--color5);
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    white-space: nowrap;
+}
+
+#joinButton:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .displayStyle {
@@ -233,7 +254,7 @@ section img {
 .eventsWeather {
     display: grid;
     gap: 15px;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .eventsWeather section {
@@ -252,6 +273,15 @@ section img {
     background-color: #240B36;
     color: white;
     width: 100%;
+}
+
+.events {
+    min-height: 150px;
+}
+
+.eventsWeather section {
+    background-color: #A4031F;
+    color: white;
 }
 
 .weather {

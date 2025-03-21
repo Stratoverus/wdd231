@@ -28,8 +28,23 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    #joinButton {
+        padding: 30px;
+        font-size: x-large;
+    }
+
+    .eventsWeather {
+        grid-template-columns: 2fr;
+    }
+
     footer {
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .eventsWeather {
+        grid-template-columns: 2fr 1fr 1fr;
     }
 }
