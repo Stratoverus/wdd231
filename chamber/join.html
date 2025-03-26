@@ -43,20 +43,23 @@
         <h1>Join Page</h1>
         <form method="get" action="thankyou.html">
             <fieldset class="formDetails">
-                <label for="fname">First Name:
+                <label for="fname">First Name*:
                     <input type="text" id="fname" name="fname" required autocomplete="given-name">
                 </label>
-                <label for="lname">Last Name:
+                <label for="lname">Last Name*:
                     <input type="text" id="lname" name="lname" required autocomplete="family-name">
                 </label>
-                <label for="title">Organization Title:
-                    <input type="text" id="title" name="title" required autocomplete="organization-title" pattern="">
+                <label for="title">Organization Title*:
+                    <input type="text" id="title" name="title" required autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$">
                 </label>
-                <label for="email">Email Address:
+                <label for="email">Email Address*:
                     <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@gmail.com">
                 </label>
-                <label for="phone">Mobile Phone Number:
+                <label for="phone">Mobile Phone Number*:
                     <input type="tel" id="phone" name="phone" required autocomplete="tel-national">
+                </label>
+                <label for="oname">Organization Name*:
+                    <input type="text" id="oname" name="oname" required autocomplete="organization">
                 </label>
             </fieldset>
             <fieldset class="membershipLevel">
@@ -65,6 +68,7 @@
             <fieldset>
 
             </fieldset>
+            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>
