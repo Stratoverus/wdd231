@@ -65,6 +65,7 @@ nav a:hover {
     right: 0;
     width: 100%;
     text-align: center;
+    z-index: 2;
 }
 
 .navigation a {
@@ -131,6 +132,7 @@ main nav {
 
 .hero {
     position: relative;
+    z-index: 1;
 }
 
 .hero img {
