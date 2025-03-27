@@ -63,13 +63,59 @@
                 </label>
             </fieldset>
             <fieldset class="membershipLevel">
-
+                <legend>Select a Membership Level*</legend>
+                <label>
+                    <input type="radio" name="membership" value="np" required>
+                    NP Membership (Non-Profit) - Free
+                    <button type="button" onclick="document.getElementById('modal-np').showModal();">Learn More</button>
+                </label>
+                <label>
+                    <input type="radio" name="membership" value="bronze">
+                    Bronze Membership
+                    <button type="button" onclick="document.getElementById('modal-bronze').showModal();">Learn More</button>
+                </label>
+                <label>
+                    <input type="radio" name="membership" value="silver">
+                    Silver Membership
+                    <button type="button" onclick="document.getElementById('modal-silver').showModal();">Learn More</button>
+                </label>
+                <label>
+                    <input type="radio" name="membership" value="gold">
+                    Gold Membership
+                    <button type="button" onclick="document.getElementById('modal-gold').showModal();">Learn More</button>
+                </label>
             </fieldset>
-            <fieldset>
-
+            <fieldset class="businessDesc">
+                <label for="description">Business Description:
+                    <textarea id="description" name="description"></textarea>
+                </label>
             </fieldset>
             <button type="submit">Submit</button>
         </form>
+        <!--Modals here-->
+        <dialog id="modal-np">
+            <h2>NP Membership</h2>
+            <p>For non-profit organizations. No membership fee required.</p>
+            <button onclick="document.getElementById('modal-np').close();">Close</button>
+        </dialog>
+        
+        <dialog id="modal-bronze">
+            <h2>Bronze Membership</h2>
+            <p>Basic membership with access to limited resources.</p>
+            <button onclick="document.getElementById('modal-bronze').close();">Close</button>
+        </dialog>
+        
+        <dialog id="modal-silver">
+            <h2>Silver Membership</h2>
+            <p>Expanded benefits, including priority support and networking opportunities.</p>
+            <button onclick="document.getElementById('modal-silver').close();">Close</button>
+        </dialog>
+        
+        <dialog id="modal-gold">
+            <h2>Gold Membership</h2>
+            <p>Premium membership with full access to all benefits and exclusive events.</p>
+            <button onclick="document.getElementById('modal-gold').close();">Close</button>
+        </dialog>
     </main>
     <footer>
         <div>
