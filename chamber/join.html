@@ -16,6 +16,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Join Page - Apache Junction Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -64,26 +65,29 @@
             </fieldset>
             <fieldset class="membershipLevel">
                 <legend>Select a Membership Level*</legend>
-                <label>
-                    <input type="radio" name="membership" value="np" required>
-                    NP Membership (Non-Profit) - Free
-                    <button type="button" onclick="document.getElementById('modal-np').showModal();">Learn More</button>
-                </label>
-                <label>
-                    <input type="radio" name="membership" value="bronze">
-                    Bronze Membership
-                    <button type="button" onclick="document.getElementById('modal-bronze').showModal();">Learn More</button>
-                </label>
-                <label>
-                    <input type="radio" name="membership" value="silver">
-                    Silver Membership
-                    <button type="button" onclick="document.getElementById('modal-silver').showModal();">Learn More</button>
-                </label>
-                <label>
-                    <input type="radio" name="membership" value="gold">
-                    Gold Membership
-                    <button type="button" onclick="document.getElementById('modal-gold').showModal();">Learn More</button>
-                </label>
+            <label>
+                <input type="radio" name="membership" value="np" required>
+                NP Membership (Non-Profit) - Free
+                <button type="button" class="open-modal" data-modal="modal-np">Learn More</button>
+            </label>
+
+            <label>
+                <input type="radio" name="membership" value="bronze">
+                Bronze Membership
+                <button type="button" class="open-modal" data-modal="modal-bronze">Learn More</button>
+            </label>
+
+            <label>
+                <input type="radio" name="membership" value="silver">
+                Silver Membership
+                <button type="button" class="open-modal" data-modal="modal-silver">Learn More</button>
+            </label>
+
+            <label>
+                <input type="radio" name="membership" value="gold">
+                Gold Membership
+                <button type="button" class="open-modal" data-modal="modal-gold">Learn More</button>
+            </label>
             </fieldset>
             <fieldset class="businessDesc">
                 <label for="description">Business Description:
