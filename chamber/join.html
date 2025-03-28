@@ -70,19 +70,16 @@
                 NP Membership (Non-Profit) - Free
                 <button type="button" class="open-modal" data-modal="modal-np">Learn More</button>
             </label>
-
             <label>
                 <input type="radio" name="membership" value="bronze">
                 Bronze Membership
                 <button type="button" class="open-modal" data-modal="modal-bronze">Learn More</button>
             </label>
-
             <label>
                 <input type="radio" name="membership" value="silver">
                 Silver Membership
                 <button type="button" class="open-modal" data-modal="modal-silver">Learn More</button>
             </label>
-
             <label>
                 <input type="radio" name="membership" value="gold">
                 Gold Membership
@@ -100,25 +97,22 @@
         <dialog id="modal-np">
             <h2>NP Membership</h2>
             <p>For non-profit organizations. No membership fee required.</p>
-            <button onclick="document.getElementById('modal-np').close();">Close</button>
+            <button class="close-modal" data-modal="modal-np">Close</button>
         </dialog>
-        
         <dialog id="modal-bronze">
             <h2>Bronze Membership</h2>
             <p>Basic membership with access to limited resources.</p>
-            <button onclick="document.getElementById('modal-bronze').close();">Close</button>
+            <button class="close-modal" data-modal="modal-bronze">Close</button>
         </dialog>
-        
         <dialog id="modal-silver">
             <h2>Silver Membership</h2>
             <p>Expanded benefits, including priority support and networking opportunities.</p>
-            <button onclick="document.getElementById('modal-silver').close();">Close</button>
+            <button class="close-modal" data-modal="modal-silver">Close</button>
         </dialog>
-        
         <dialog id="modal-gold">
             <h2>Gold Membership</h2>
             <p>Premium membership with full access to all benefits and exclusive events.</p>
-            <button onclick="document.getElementById('modal-gold').close();">Close</button>
+            <button class="close-modal" data-modal="modal-gold">Close</button>
         </dialog>
     </main>
     <footer>
