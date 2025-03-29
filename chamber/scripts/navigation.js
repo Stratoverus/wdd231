@@ -24,7 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById(pageMap[currentPage]).classList.add("active");
     }
 });
-
-document.getElementById("joinButton").addEventListener("click", function() {
-    window.location.href = "join.html";
-});

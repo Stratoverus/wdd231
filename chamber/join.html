@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/join.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Join Page - Apache Junction Chamber of Commerce">
@@ -42,7 +40,7 @@
     </header>
     <main>
         <h1>Join Page</h1>
-        <form method="get" action="thankyou.html">
+        <form id="membershipForm" method="get" action="thankyou.html">
             <fieldset class="formDetails">
                 <label for="fname">First Name*:
                     <input type="text" id="fname" name="fname" required autocomplete="given-name">
@@ -62,6 +60,7 @@
                 <label for="oname">Organization Name*:
                     <input type="text" id="oname" name="oname" required autocomplete="organization">
                 </label>
+                <input type="hidden" id="timestamp" name="timestamp">
             </fieldset>
             <fieldset class="membershipLevel">
                 <legend>Select a Membership Level*</legend>
