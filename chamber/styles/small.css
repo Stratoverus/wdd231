@@ -366,6 +366,211 @@ section img {
     text-align: left;
 }
 
+/**Join Section**/
+#membershipForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--color1);
+    font-family: var(--paragraph-font);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formDetails {
+    flex: 1;
+    min-width: 300px;
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--color5);
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/*Trying something new here*/
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid var(--color3);
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+    color: var(--color5);
+    margin: 5px;
+}
+
+.membershipLevel {
+    flex: 1;
+    min-width: 250px;
+    margin-left: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membershipLevel legend {
+    font-weight: bold;
+    color: var(--color4);
+    font-size: 1.2rem;
+    
+}
+
+.membershipLevel label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color3);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: Black;
+}
+
+.membershipLevel input[type="radio"] {
+    transform: scale(1.2);
+}
+
+button.open-modal {
+    background: var(--color2);
+    color: Black;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+button.open-modal:hover {
+    background: var(--color4);
+    color: white;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: var(--color4);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: var(--heading-font);
+}
+
+button[type="submit"]:hover {
+    background: var(--color5);
+}
+
+dialog {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: white;
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+}
+
+dialog h2 {
+    color: var(--color4);
+    font-family: var(--heading-font);
+}
+
+button.close-modal {
+    background: var(--color4);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 10px auto 0;
+}
+
+button.close-modal:hover {
+    background: var(--color5);
+}
+
+/**Thank you Page, trying something new to only reference the page**/
+
+.thankyou-page main {
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-page main div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thankyou-page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #A4031F;
+    margin-bottom: 20px;
+}
+
+.thankyou-page p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.thankyou-page ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thankyou-page li {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #DB9065;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.thankyou-page li strong {
+    font-weight: bold;
+    color: #240B36;
+}
+
+.thankyou-page span {
+    font-weight: normal;
+    color: white;
+}
+
+
 /**Footer**/
 footer {
     text-align: center;
