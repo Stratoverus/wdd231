@@ -525,7 +525,7 @@ button.close-modal:hover {
 .thankyou-page main {
     margin: 0 auto;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px black;
 }
 
 .thankyou-page main div {
@@ -536,7 +536,7 @@ button.close-modal:hover {
 .thankyou-page h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #A4031F;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -562,12 +562,12 @@ button.close-modal:hover {
 
 .thankyou-page li strong {
     font-weight: bold;
-    color: #240B36;
+    color: black;
 }
 
-.thankyou-page span {
-    font-weight: normal;
-    color: white;
+.thankyou-page main span {
+    font-weight: bold;
+    color: black;
 }
 
 
