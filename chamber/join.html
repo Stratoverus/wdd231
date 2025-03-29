@@ -60,14 +60,14 @@
                 <label for="oname">Organization Name*:
                     <input type="text" id="oname" name="oname" required autocomplete="organization">
                 </label>
-                <label for="membership">Membership Level*:
-                    <select id="membership" name="membership" required>
-                        <option value="np">NP Membership (Non-Profit) - Free</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
+                <label for="membership">Membership Level*:</label>
+                <select id="membership" name="membership" required>
+                    <option value="" disabled selected>Select a Membership Level</option>
+                    <option value="np">NP Membership (Non-Profit) - Free</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
                 <label for="description">Business Description:
                     <textarea id="description" name="description"></textarea>
                 </label>
@@ -91,7 +91,6 @@
                     <h3>Gold Membership</h3>
                     <button type="button" class="open-modal" data-modal="modal-gold">Learn More</button>
                 </div>
-            </label>
             </fieldset>
             <button type="submit">Submit</button>
         </form>
