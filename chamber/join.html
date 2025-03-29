@@ -55,10 +55,18 @@
                     <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@gmail.com">
                 </label>
                 <label for="phone">Mobile Phone Number*:
-                    <input type="tel" id="phone" name="phone" required autocomplete="tel-national">
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
                 </label>
                 <label for="oname">Organization Name*:
                     <input type="text" id="oname" name="oname" required autocomplete="organization">
+                </label>
+                <label for="membership">Membership Level*:
+                    <select id="membership" name="membership" required>
+                        <option value="np">NP Membership (Non-Profit) - Free</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
                 </label>
                 <label for="description">Business Description:
                     <textarea id="description" name="description"></textarea>
@@ -66,26 +74,23 @@
                 <input type="hidden" id="timestamp" name="timestamp">
             </fieldset>
             <fieldset class="membershipLevel">
-                <legend>Select a Membership Level*</legend>
-            <label>
-                <input type="radio" name="membership" value="np" required>
-                NP Membership (Non-Profit) - Free
-                <button type="button" class="open-modal" data-modal="modal-np">Learn More</button>
-            </label>
-            <label>
-                <input type="radio" name="membership" value="bronze">
-                Bronze Membership
-                <button type="button" class="open-modal" data-modal="modal-bronze">Learn More</button>
-            </label>
-            <label>
-                <input type="radio" name="membership" value="silver">
-                Silver Membership
-                <button type="button" class="open-modal" data-modal="modal-silver">Learn More</button>
-            </label>
-            <label>
-                <input type="radio" name="membership" value="gold">
-                Gold Membership
-                <button type="button" class="open-modal" data-modal="modal-gold">Learn More</button>
+                <legend>Membership Levels</legend>
+                <div class="membership-card" id="card-np">
+                    <h3>NP Membership (Non-Profit) - Free</h3>
+                    <button type="button" class="open-modal" data-modal="modal-np">Learn More</button>
+                </div>
+                <div class="membership-card" id="card-bronze">
+                    <h3>Bronze Membership</h3>
+                    <button type="button" class="open-modal" data-modal="modal-bronze">Learn More</button>
+                </div>
+                <div class="membership-card" id="card-silver">
+                    <h3>Silver Membership</h3>
+                    <button type="button" class="open-modal" data-modal="modal-silver">Learn More</button>
+                </div>
+                <div class="membership-card" id="card-gold">
+                    <h3>Gold Membership</h3>
+                    <button type="button" class="open-modal" data-modal="modal-gold">Learn More</button>
+                </div>
             </label>
             </fieldset>
             <button type="submit">Submit</button>
