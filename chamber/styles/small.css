@@ -415,7 +415,7 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
 
 .membershipLevel {
     flex: 1;
-    min-width: 250px;
+    min-width: 350px;
     margin-left: 20px;
     animation: fadeInUp 1s ease-out;
     display: flex;
@@ -446,7 +446,7 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 220px;
+    min-width: 300px;
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
