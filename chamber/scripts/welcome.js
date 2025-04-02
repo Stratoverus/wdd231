@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
         } else if (differenceInDays === 1) {
             message = "You last visited 1 day ago. Let us know if you have any questions."
         } else {
-            message = "It's been a while! You last visited ${differenceInDays} days ago. As always, let us know if you have any questions."
+            message = `It's been a while! You last visited ${differenceInDays} days ago. As always, let us know if you have any questions.`
         }
     }
 
