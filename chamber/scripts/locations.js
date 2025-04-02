@@ -1,6 +1,6 @@
 const url = 'https://stratoverus.github.io/wdd231/chamber/data/discover.json';
 
-const container = document.querySelector('#locations');
+const container = document.querySelector('.locations');
 
 async function getLocationData() {
     const response = await fetch(url);
@@ -22,16 +22,17 @@ function displayLocations(locations) {
         card.innerHTML = `
             <div class="card">
                 <h3>${location.name}</h3>
-                <img src="images/${location.image}" alt="${location.name}">
+                <img src="images/${location.image}" alt="${location.name}" loading="lazy">
                 <p>${location.description}</p>
-                <button onclick="openModal('${location.name}', '${location.extendedDescription}')">Learn More</button>  
+                <button onclick="openModal('${location.name}', '${location.extendedDescription}')">Learn More</button>
+            </div>  
         `;
 
         container.appendChild(card);
     });
 }
 
-function openlModal(title, description) {
+function openModal(title, description) {
     const modal = document.getElementById("modal");
     modal.querySelector(".modalTitle").textContent = title;
     modal.querySelector(".modalContent").textContent = description;
