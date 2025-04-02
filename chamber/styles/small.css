@@ -231,6 +231,10 @@ section img {
     overflow-x: hidden;
 }
 
+section .card img {
+    max-width: 300px;
+}
+
 .list-row {
     display: grid;
     grid-template-columns: 1fr;

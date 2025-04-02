@@ -4,6 +4,7 @@
             "name": "Superstition Mountain Museum",
             "address": "4087 E Apache Trail, Apache Junction, AZ 85119",
             "image": "superstition_museum.webp",
+            "imageCaption": "Entrance to Superstition Mountain Museum.",
             "description": "A museum showcasing the history and legends of the Superstition Mountains.",
             "extendedDescription": "The Superstition Mountain Museum offers exhibits on Native American culture, Lost Dutchman Mine legends, and historical artifacts from the region. Visitors can explore outdoor exhibits, including an old stagecoach and mining equipment."
         },
@@ -11,6 +12,7 @@
             "name": "Goldfield Ghost Town",
             "address": "4650 N Mammoth Mine Rd, Apache Junction, AZ 85119",
             "image": "goldfield_ghost_town.webp",
+            "imageCaption": "A street in Goldfield Ghost Town.",
             "description": "A reconstructed 1890s gold mining town with shops, saloons, and attractions.",
             "extendedDescription": "Goldfield Ghost Town provides visitors with a chance to step back in time and experience the Wild West. It features gold panning, mine tours, a narrow-gauge railroad, and live gunfight reenactments."
         },
@@ -18,6 +20,7 @@
             "name": "Lost Dutchman State Park",
             "address": "6109 N Apache Trail, Apache Junction, AZ 85119",
             "image": "lost_dutchman_park.webp",
+            "imageCaption": "Scenic view of Lost Dutchman Park.",
             "description": "A scenic state park at the base of the Superstition Mountains, popular for hiking.",
             "extendedDescription": "Lost Dutchman State Park offers miles of hiking trails, including the famous Siphon Draw Trail leading up to the Flatiron. The park is named after the legendary Lost Dutchman Gold Mine and is a favorite spot for photographers and nature lovers."
         },
@@ -25,6 +28,7 @@
             "name": "Tortilla Flat",
             "address": "1 Main St, Tortilla Flat, AZ 85190",
             "image": "tortilla_flat.webp",
+            "imageCaption": "Historic buildings in Tortilla Flat.",
             "description": "A historic stagecoach stop with a saloon, general store, and live entertainment.",
             "extendedDescription": "Tortilla Flat is a small, historic settlement along the Apache Trail, known for its rustic charm, saddle bar stools, and unique dollar bill-covered walls. Visitors can enjoy hearty Western meals, live music, and breathtaking canyon views."
         },
@@ -32,6 +36,7 @@
             "name": "Apache Trail Scenic Drive",
             "address": "Apache Trail, AZ",
             "image": "apache_trail.webp",
+            "imageCaption": "Winding road of Apache Trail.",
             "description": "A historic and picturesque desert road with stunning mountain and lake views.",
             "extendedDescription": "The Apache Trail is a winding mountain road that leads through the rugged desert landscape, passing by Canyon Lake, the Superstition Mountains, and old mining sites. It is a favorite route for scenic drives and adventure seekers."
         },
@@ -39,6 +44,7 @@
             "name": "Canyon Lake",
             "address": "16802 AZ-88, Apache Junction, AZ 85119",
             "image": "canyon_lake.webp",
+            "imageCaption": "Serene waters of Canyon Lake.",
             "description": "A beautiful desert lake perfect for boating, fishing, and hiking.",
             "extendedDescription": "Canyon Lake offers visitors a serene escape with opportunities for kayaking, paddleboarding, and scenic boat cruises. The surrounding cliffs and desert landscape make it a picturesque destination for outdoor enthusiasts."
         },
@@ -46,6 +52,7 @@
             "name": "Dolly Steamboat",
             "address": "16802 AZ-88, Apache Junction, AZ 85119",
             "image": "dolly_steamboat.webp",
+            "imageCaption": "Dolly Steamboat on Canyon Lake.",
             "description": "A scenic boat tour on Canyon Lake, offering wildlife viewing and sunset cruises.",
             "extendedDescription": "The Dolly Steamboat offers narrated cruises through the stunning rock formations and waters of Canyon Lake. Passengers can spot bighorn sheep, bald eagles, and other wildlife while enjoying the tranquil beauty of the desert oasis."
         },
@@ -53,6 +60,7 @@
             "name": "Hieroglyphic Trail",
             "address": "Peralta Rd, Apache Junction, AZ 85119",
             "image": "hieroglyphic_trail.webp",
+            "imageCaption": "Petroglyphs along Hieroglyphic Trail.",
             "description": "A popular hiking trail featuring ancient petroglyphs and seasonal waterfalls.",
             "extendedDescription": "The Hieroglyphic Trail is a moderate 3-mile round-trip hike that leads to a stunning collection of ancient Hohokam petroglyphs carved into the rocks. During rainy seasons, small waterfalls and pools form in the canyon, adding to the scenic beauty."
         }
