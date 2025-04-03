@@ -22,12 +22,16 @@ function displayLocations(locations) {
         card.innerHTML = `
             <div class="card">
                 <h3>${location.name}</h3>
-                <figure>
-                    <img src="images/${location.image}" alt="${location.name}" loading="lazy">
-                    <figcaption>${location.imageCaption}</figcaption>
-                </figure>
-                <p>${location.description}</p>
-                <p>${location.address}</p>
+                <div class="locationDetails">
+                    <figure>
+                        <img src="images/${location.image}" alt="${location.name}" loading="lazy">
+                        <figcaption>${location.imageCaption}</figcaption>
+                    </figure>
+                    <div>
+                        <p>${location.description}</p>
+                        <p>${location.address}</p>
+                    </div>
+                </div>
                 <button class="open-modal" onclick="openModal('${location.name}', '${location.extendedDescription}')">Learn More</button>
             </div>  
         `;
