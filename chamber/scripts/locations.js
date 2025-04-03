@@ -17,7 +17,7 @@ function displayLocations(locations) {
     container.innerHTML = "";
 
     locations.forEach((location) => {
-        const card = document.createElement("section");
+        const card = document.createElement("div");
 
         card.innerHTML = `
             <div class="card">
@@ -26,8 +26,8 @@ function displayLocations(locations) {
                     <img src="images/${location.image}" alt="${location.name}" loading="lazy">
                     <figcaption>${location.imageCaption}</figcaption>
                 </figure>
-                <p>${location.address}</p>
                 <p>${location.description}</p>
+                <p>${location.address}</p>
                 <button class="open-modal" onclick="openModal('${location.name}', '${location.extendedDescription}')">Learn More</button>
             </div>  
         `;

@@ -69,3 +69,25 @@
         font-size: xx-large;
     }
 }
+
+@media screen and (min-width: 640px) {
+    .locations .card {
+        max-width: 550px;
+    }
+
+    .locations img:hover {
+        opacity: 50%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .locations {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .locations .card {
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+    }
+}

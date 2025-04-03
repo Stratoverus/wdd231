@@ -124,6 +124,10 @@ main {
     padding: 10px;
 }
 
+.discoverPage {
+    padding: 5px;
+}
+
 main h1 {
     padding: 10px;
     margin: 0;
@@ -203,6 +207,32 @@ section img {
     padding: 10px;
 }
 
+.locations {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1px;
+}
+
+.locations .card {
+    background-color: lightgray;
+    gap: 15px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 300px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.locations figure {
+    margin: 0 auto;
+}
+
 #members {
     display: grid;
     gap: 15px;
@@ -229,10 +259,6 @@ section img {
     max-width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
-}
-
-section .card img {
-    max-width: 300px;
 }
 
 .list-row {
