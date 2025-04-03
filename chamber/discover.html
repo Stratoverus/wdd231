@@ -6,12 +6,9 @@
     <meta name="author" content="Keith Eberhard">
     <title>Discover Page - Apache Junction Chamber of Commerce</title>
     <meta name="description" content="Discover Page for Apache Junction Chamber of Commerce">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Titillium+Web:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preload" href="styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/locations.js" defer></script>
@@ -21,6 +18,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://stratoverus.github.io/wdd231/chamber/images/aj-chamber-commerce.jpg">
     <meta property="og:url" content="https://stratoverus.github.io/wdd231/chamber/discover.html">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Titillium+Web:wght@400&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Titillium+Web:wght@400&display=swap">  
 </head>
 <body>
     <header>
