@@ -24,7 +24,7 @@ function displayLocations(locations) {
                 <h3>${location.name}</h3>
                 <div class="locationDetails">
                     <figure>
-                        <img src="images/${location.image}" alt="${location.name}" loading="lazy">
+                        <img src="images/${location.image}" alt="${location.name}" loading="lazy" width="300" height="200">
                         <figcaption>${location.imageCaption}</figcaption>
                     </figure>
                     <div>
