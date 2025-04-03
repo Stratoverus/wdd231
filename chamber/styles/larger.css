@@ -94,6 +94,7 @@
     .locations {
         grid-template-columns: 1fr 1fr;
         margin: auto;
+        justify-items: center;
     }
     
     .locations .card {
