@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const pageMap = {
         "index.html": "home",
-        "chamber-placeholder.html": "chamber",
-        "github-placeholder.html": "github",
+        "collection.html": "collection",
+        "favorites.html": "favorites",
     };
 
     if (pageMap[currentPage]) {
