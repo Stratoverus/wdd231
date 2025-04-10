@@ -1,0 +1,1 @@
+//Collections page JS and logic

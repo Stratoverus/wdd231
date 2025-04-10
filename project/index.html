@@ -7,6 +7,7 @@
     <meta name="description" content="Course Final for Wdd231 - Keith Eberhard">
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/gallery.js"></script>
     <title>Final Project Home Page - Keith Eberhard</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -28,7 +29,7 @@
             <a href="collection.html" id="collection">My Collection</a>
             <a href="favorites.html" id="favorites">Favorites</a>
         </nav>
-        <h1></h1>
+        <h1>Keith's Pokémon Collection</h1>
         <img src="" alt="">
         <button>Trade Request</button>
     </header>
@@ -49,7 +50,23 @@
         <div>
             <h2>Discover some of my Rarest and Most Unique Cards in my Collection</h2>
             <div class="homepage-gallery">
-                
+                <!--Will display cards here, and will use modal's.-->
+
+                <!--Modal will be here-->
+                <div id="card-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-image">
+                            <img id="modal-img" src="" alt="Card Image">
+                        </div>
+                        <div class="modal-details">
+                            <h3 id="modal-title"></h3>
+                            <p><strong>Set:</strong> <span id="modal-set"></span></p>
+                            <p><strong>Rarity:</strong> <span id="modal-rarity"></span></p>
+                            <p><strong>Price:</strong> <span id="modal-price"></span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
