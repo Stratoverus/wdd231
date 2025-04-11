@@ -1,14 +1,171 @@
-/* Modal styling */
+/*Root*/
+:root {
+    --heading-font: 'Press Start 2P', serif;
+    --paragraph-font: 'Nunito', 'serif';
+    --color1: #F5F5F5; /*Background for "light mode"*/
+    --color2: #1A1A1A; /*Deep gray for "dark mode" */
+    --color3: #D32F2F; /*Pokeball Red for primary, headings and buttons*/
+    --color4: #1976D2; /*Pokemon blue, for call to actions(cards and highlights) */
+    --color5: #212121; /*Dark text on light mode*/
+    --color6: #FFFFFF; /*light text on dark mode */
+    --color7: #FBC02D; /*Pokemon yello for contrast(hover effects, borders)*/
+    --color8: #424242; /*Dark gray for clear spearate, footer and nav background */
+}
+
+* {
+    text-decoration: none;
+}
+
+p, button {
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+/*Body*/
+body {
+    margin: 0 auto;
+}
+
+/*Header*/
+header {
+    background-color: var(--color3);
+    color: var(--color6)
+}
+
+#menu {
+    color: var(--color6);
+    display: inline-block;
+}
+
+#menu::before {
+    content: "≡";
+    font-size: xx-large;
+}
+
+#menu.show::before {
+    content: "X";
+    font-size: Larger;
+}
+
+nav {
+    display: flex;
+    font-size: large;
+}
+
+nav a{
+    color: var(--color6);
+    font-family: var(--heading-font);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--color3);
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.navigation a {
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid white;
+}
+
+.navigation a:first-child {
+    border-top: 1px solid white;
+}
+
+.navigation a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navigation.show {
+    display: flex;
+}
+
+header button {
+    background-color: var(--color4);
+    color: var(--color6);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Main*/
+main {
+    background-color: var(--color2);
+    color: var(--color6);
+}
+
+.homepage-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+.homepage-gallery .card {
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.homepage-gallery .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.homepage-gallery .card::after {
+    content: "Details";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.homepage-gallery .card:hover::after {
+    opacity: 1;
+}
+
+.homepage-gallery .card:hover {
+    transform: scale(1.02);
+}
+
+/*Modal*/
 #card-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1; /* On top */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.8);
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -18,13 +175,32 @@
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
+    background-color: var(--color4);
+    color: var(--color6); 
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: 1px solid var(--color8);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
     display: flex;
+    gap: 20px;
     animation: slideIn 0.5s ease-in-out;
+}
+
+.modal-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-details {
+    flex: 1;
+    padding: 0 20px;
 }
 
 @keyframes slideIn {
@@ -33,17 +209,22 @@
 }
 
 .close {
-    color: #aaa;
+    color: var(--color8);
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 5px;
     right: 20px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover {
+    color: var(--color3);
+}
+
+/*Footer*/
+footer {
+    background-color: var(--color8);
+    color: var(--color6)
 }
