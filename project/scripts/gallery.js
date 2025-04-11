@@ -13,6 +13,10 @@ function normalizeSetName(setName) {
     if (/crown zenith:?\s*(?:galarian gallery)?/i.test(name)) {
         return "Crown Zenith";
     }
+
+    if (/scarlet\s*&\s*violet\s*base\s*set/i.test(name)) {
+        return "Scarlet & Violet";
+    }
     
     if (name.includes(":")) {
         name = name.split(":")[0].trim();
@@ -73,7 +77,8 @@ async function loadHomepageCards() {
                      data-name="${card["Product Name"]}"
                      data-set="${card["Set"]}"
                      data-number="${cardData.number}"
-                     class="card-image">
+                     class="card-image"
+                     loading="lazy">
             `;
             cardElement.querySelector("img").addEventListener("click", openModal);
             homepageGallery.appendChild(cardElement);

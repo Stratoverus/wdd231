@@ -12,6 +12,9 @@ export async function fetchMultipleCardDetails(cards) {
         if (rawSet.includes(":")) {
             rawSet = rawSet.split(":")[0].trim();
         }
+        if (rawSet.includes("Scarlet")) {
+            rawSet = rawSet.replace("Base Set", "").trim();
+        }
 
         const number = card["Card Number"].split("/")[0].trim().replace(/^0+/, "");
         return `(set.name:"${rawSet}" number:${number})`;
@@ -19,6 +22,9 @@ export async function fetchMultipleCardDetails(cards) {
 
     const baseQuery = queries.join(' or ');
     const requestUrl = `${API_URL}?q=${encodeURIComponent(baseQuery)}`;
+    
+    console.log('API Request URL:', requestUrl);
+    console.log('Decoded URL:', decodeURIComponent(requestUrl));
 
     try {
         const response = await fetch(requestUrl, {
@@ -35,6 +41,7 @@ export async function fetchMultipleCardDetails(cards) {
         return data.data || [];
 
     } catch (err) {
+        console.error('API Error:', err);
         return [];
     }
 }

@@ -64,7 +64,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.navigation {
+navigation {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -155,6 +155,53 @@ main {
     transform: scale(1.02);
 }
 
+/*Collection gallery*/
+.collection-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+.collection-gallery .card {
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collection-gallery .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.collection-gallery .card::after {
+    content: "Details";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.collection-gallery .card:hover::after {
+    opacity: 1;
+}
+
+.collection-gallery .card:hover {
+    transform: scale(1.02);
+}
+
 /*Modal*/
 #card-modal {
     display: none;
@@ -221,6 +268,54 @@ main {
 
 .close:hover {
     color: var(--color3);
+}
+
+/*Filter Controls*/
+.filter-controls {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    color: var(--color6);
+    font-family: var(--heading-font);
+    font-size: 0.8rem;
+}
+
+.filter-dropdown {
+    padding: 10px 20px;
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    background-color: var(--color4);
+    color: var(--color6);
+    border: 2px solid var(--color7);
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.filter-dropdown:hover {
+    background-color: var(--color3);
+}
+
+.filter-dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color7);
+}
+
+.filter-dropdown option {
+    background-color: var(--color2);
+    padding: 10px;
 }
 
 /*Footer*/
