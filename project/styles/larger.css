@@ -6,6 +6,14 @@
         align-items: center;
         text-align: center;
     }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header img {
+        display: flex;
+    }
     
     .hero {
         max-width: 1300px;
@@ -26,6 +34,21 @@
         max-width: 800px;
         height: auto;
         margin: 0 auto;
+    }
+
+    .modal-content {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .modal-image {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .modal-details {
+        flex: 1;
+        padding: 0 20px;
     }
 
     footer {

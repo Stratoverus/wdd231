@@ -240,6 +240,12 @@ main div {
 }
 
 /*Collection gallery*/
+.collection-heading {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
 .collection-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -311,27 +317,30 @@ main div {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid var(--color8);
-    width: 90%;
+    width: 95%;
     max-width: 800px;
     position: relative;
     display: flex;
+    flex-direction: column;
     gap: 20px;
     animation: slideIn 0.5s ease-in-out;
 }
 
 .modal-image {
-    flex: 1;
-    max-width: 50%;
+    flex: none;
+    max-width: 100%;
 }
 
 .modal-image img {
     width: 100%;
     height: auto;
+    max-width: 280px;
 }
 
 .modal-details {
-    flex: 1;
-    padding: 0 20px;
+    flex: none;
+    padding: 10px 0;
+    max-width: 90%;
 }
 
 @keyframes slideIn {
@@ -341,11 +350,12 @@ main div {
 
 .close {
     color: var(--color8);
+    padding: 10px;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 0;
     cursor: pointer;
     z-index: 1001;
 }
