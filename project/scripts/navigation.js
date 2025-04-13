@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const pageMap = {
         "index.html": "home",
         "collection.html": "collection",
-        "favorites.html": "favorites",
+        "trading-guide.html": "trading-guide",
+        "trade.html": "trade",
     };
 
     if (pageMap[currentPage]) {

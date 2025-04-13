@@ -64,7 +64,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-navigation {
+.navigation {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -95,18 +95,29 @@ navigation {
     display: flex;
 }
 
-header button {
+.button {
+    display: inline-block;
     background-color: var(--color4);
     color: var(--color6);
+    font-family: var(--paragraph-font);
     font-weight: 700;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: var(--color3);
 }
 
 /*Main*/
 main {
     background-color: var(--color2);
     color: var(--color6);
+    margin: 0;
 }
 
 .homepage-gallery {
@@ -318,8 +329,29 @@ main {
     padding: 10px;
 }
 
+.faq-head {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.faq {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.faq-item {
+    padding: 10px;
+}
+
 /*Footer*/
 footer {
+    display: grid;
     background-color: var(--color8);
-    color: var(--color6)
+    color: var(--color6);
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.icons a {
+    margin: 0 10px;
 }
