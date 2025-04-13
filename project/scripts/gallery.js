@@ -80,7 +80,6 @@ async function loadHomepageCards() {
                      class="card-image"
                      loading="lazy">
             `;
-            cardElement.querySelector("img").addEventListener("click", openModal);
             homepageGallery.appendChild(cardElement);
         }
     }
@@ -107,6 +106,10 @@ function openModal(event) {
     const img = event.target;
     const rawSetName = img.dataset.set;
     const number = img.dataset.number;
+    
+    if (!rawSetName || !number) {
+        return;
+    }
     
     const normalizedSetName = normalizeSetName(rawSetName);
     const lookupKey = `${normalizedSetName}-${number}`;
@@ -149,9 +152,18 @@ function openModal(event) {
     }
 }
 
+document.addEventListener('click', function(event) {
+    const card = event.target.closest('.card');
+    if (card) {
+        const img = card.querySelector('img');
+        if (img) {
+            openModal({ target: img });
+        }
+    }
+});
+
 document.querySelector(".close").addEventListener("click", function() {
     document.getElementById("card-modal").style.display = "none";
 });
-
 
 loadHomepageCards();

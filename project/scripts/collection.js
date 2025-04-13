@@ -197,7 +197,6 @@ async function displayCards(cards, append = false) {
                          data-number="${cardData.number}"
                          class="card-image">
                 `;
-                cardElement.querySelector("img").addEventListener("click", openModal);
                 collectionGallery.appendChild(cardElement);
             }
         }
@@ -271,6 +270,16 @@ function openModal(event) {
         modal.style.display = "block";
     }
 }
+
+document.addEventListener('click', function(event) {
+    const card = event.target.closest('.card');
+    if (card) {
+        const img = card.querySelector('img');
+        if (img) {
+            openModal({ target: img });
+        }
+    }
+});
 
 document.querySelector(".close").addEventListener("click", function() {
     document.getElementById("card-modal").style.display = "none";
