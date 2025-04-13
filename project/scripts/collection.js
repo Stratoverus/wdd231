@@ -68,7 +68,6 @@ async function loadCollection() {
     console.log('Valid cards after filtering:', currentCards.length);
     updateDisplay();
 
-    // Add event listeners
     filterSelect.addEventListener('change', updateDisplay);
     sortSelect.addEventListener('change', updateDisplay);
     window.addEventListener('scroll', handleScroll);
@@ -112,7 +111,7 @@ async function displayCards(cards, append = false) {
     if (!append) {
         collectionGallery.innerHTML = '';
         currentPage = 0;
-        // Filter out promos/prize cards before setting filteredAndSortedCards
+        //Filter out promos/prize cards before setting filteredAndSortedCards
         filteredAndSortedCards = cards.filter(card => {
             const isPromoOrPrize = 
                 card["Category"] === "Promo" || 
