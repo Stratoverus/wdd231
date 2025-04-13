@@ -36,6 +36,10 @@
         margin: 0 auto;
     }
 
+    .collection-heading {
+        font-size: x-large;
+    }
+
     .modal-content {
         flex-direction: row;
         padding: 10px;

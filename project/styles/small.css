@@ -244,6 +244,7 @@ main div {
     margin: 0 auto;
     padding: 10px;
     text-align: center;
+    font-size: medium;
 }
 
 .collection-gallery {
