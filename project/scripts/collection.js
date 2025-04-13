@@ -35,9 +35,7 @@ function normalizeSetName(setName) {
 
 async function loadCollection() {
     const allCards = await fetch('data/cards.json').then(response => response.json());
-    console.log('Total cards:', allCards.length);
     
-    // Enhanced filtering
     currentCards = allCards.filter(card => {
         const loweredSet = card["Set"].toLowerCase().trim();
         const isPromoOrPrize = 
@@ -52,20 +50,9 @@ async function loadCollection() {
             loweredSet.includes("trick") ||
             loweredSet.includes("exclusives");
 
-        // Log excluded cards for debugging
-        if (isPromoOrPrize || isExcludedSet) {
-            console.log('Excluded card:', {
-                name: card["Product Name"].trim(), // Trim product names
-                set: card["Set"],
-                category: card["Category"],
-                reason: isPromoOrPrize ? 'Promo/Prize' : 'Excluded Set'
-            });
-        }
-
         return !isPromoOrPrize && !isExcludedSet;
     });
     
-    console.log('Valid cards after filtering:', currentCards.length);
     updateDisplay();
 
     filterSelect.addEventListener('change', updateDisplay);
@@ -127,29 +114,9 @@ async function displayCards(cards, append = false) {
     const endIdx = Math.min(startIdx + CARDS_PER_PAGE, filteredAndSortedCards.length);
     const pageCards = filteredAndSortedCards.slice(startIdx, endIdx);
 
-    console.log(`Loading cards ${startIdx + 1} to ${endIdx} (${pageCards.length} cards)`);
-
     if (pageCards.length > 0) {
-        console.log(`Attempting to fetch ${pageCards.length} valid cards from API...`);
         const cardDetails = await fetchMultipleCardDetails(pageCards);
-        console.log(`Received ${cardDetails.length} cards from API`);
         
-        // Log any cards that weren't found
-        const foundCardNumbers = cardDetails.map(card => card.number);
-        const missingCards = pageCards.filter(card => {
-            const cardNumber = card["Card Number"].split("/")[0].trim().replace(/^0+/, "");
-            return !foundCardNumbers.includes(cardNumber);
-        });
-        
-        if (missingCards.length > 0) {
-            console.warn('Missing cards:', missingCards.map(card => ({
-                set: card["Set"],
-                number: card["Card Number"],
-                name: card["Product Name"]
-            })));
-        }
-
-        // Store card details in localStorage for modal use
         const storedCards = new Map(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
         cardDetails.forEach(card => {
             const storageKey = `${card.set.name}-${card.number}`;
@@ -202,7 +169,6 @@ async function displayCards(cards, append = false) {
         }
 
         currentPage++;
-        console.log(`Page ${currentPage}: Displayed ${document.querySelectorAll('.collection-gallery .card').length} cards`);
         isLoading = false;
     }
 }
@@ -271,16 +237,6 @@ async function openModal(event) {
         if (cardDetails.tcgplayer?.prices) {
             let price = null;
             const variant = (cardInCollection?.["Variance"] || "normal").toLowerCase();
-            
-            // Add debugging logs
-            console.log('Card Details:', {
-                name: cardDetails.name,
-                variant: variant,
-                prices: cardDetails.tcgplayer.prices,
-                hasReverseHolo: !!cardDetails.tcgplayer.prices.reverseHolofoil,
-                hasHolo: !!cardDetails.tcgplayer.prices.holofoil,
-                hasNormal: !!cardDetails.tcgplayer.prices.normal
-            });
 
             if (variant === "reverse holofoil" && cardDetails.tcgplayer.prices.reverseHolofoil) {
                 price = cardDetails.tcgplayer.prices.reverseHolofoil.market;
@@ -290,16 +246,8 @@ async function openModal(event) {
                 price = cardDetails.tcgplayer.prices.normal.market;
             }
 
-            // Add price debugging
-            console.log('Selected Price:', {
-                variant: variant,
-                price: price,
-                finalText: price ? `$${price.toFixed(2)}` : 'Price not available'
-            });
-
             modalPrice.textContent = price ? `$${price.toFixed(2)}` : 'Price not available';
         } else {
-            console.log('No TCGPlayer prices available for:', cardDetails.name);
             modalPrice.textContent = 'Price not available';
         }
 

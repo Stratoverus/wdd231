@@ -102,14 +102,10 @@ function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-function openModal(event) {
+async function openModal(event) {
     const img = event.target;
     const rawSetName = img.dataset.set;
     const number = img.dataset.number;
-    
-    if (!rawSetName || !number) {
-        return;
-    }
     
     const normalizedSetName = normalizeSetName(rawSetName);
     const lookupKey = `${normalizedSetName}-${number}`;
@@ -122,7 +118,6 @@ function openModal(event) {
     ].filter(Boolean);
 
     const storedCards = new Map(JSON.parse(localStorage.getItem(STORAGE_KEY)));
-    
     let cardDetails = null;
     for (const key of altKeys) {
         cardDetails = storedCards.get(key);
@@ -130,19 +125,40 @@ function openModal(event) {
     }
 
     if (cardDetails) {
+        const collectionData = await fetch('data/cards.json').then(response => response.json());
+        const cardInCollection = collectionData.find(card => {
+            const cardNumber = card["Card Number"].split("/")[0].trim().replace(/^0+/, "");
+            return card["Set"] === rawSetName && cardNumber === number;
+        });
+
         const modalImage = document.getElementById("modal-img");
         const modalTitle = document.getElementById("modal-title");
         const modalSet = document.getElementById("modal-set");
         const modalRarity = document.getElementById("modal-rarity");
+        const modalVariant = document.getElementById("modal-variant");
+        const modalQuantity = document.getElementById("modal-quantity");
         const modalPrice = document.getElementById("modal-price");
 
         modalImage.src = cardDetails.images.large;
         modalTitle.textContent = cardDetails.name;
         modalSet.textContent = cardDetails.set.name;
         modalRarity.textContent = cardDetails.rarity;
-        
-        if (cardDetails.tcgplayer?.prices?.holofoil?.market) {
-            modalPrice.textContent = `$${cardDetails.tcgplayer.prices.holofoil.market.toFixed(2)}`;
+        modalVariant.textContent = cardInCollection ? cardInCollection["Variance"] : "Unknown";
+        modalQuantity.textContent = cardInCollection ? cardInCollection["Quantity"] : "0";
+
+        if (cardDetails.tcgplayer?.prices) {
+            let price = null;
+            const variant = (cardInCollection?.["Variance"] || "normal").toLowerCase();
+
+            if (variant === "reverse holofoil" && cardDetails.tcgplayer.prices.reverseHolofoil) {
+                price = cardDetails.tcgplayer.prices.reverseHolofoil.market;
+            } else if (variant === "holofoil" && cardDetails.tcgplayer.prices.holofoil) {
+                price = cardDetails.tcgplayer.prices.holofoil.market;
+            } else if (cardDetails.tcgplayer.prices.normal) {
+                price = cardDetails.tcgplayer.prices.normal.market;
+            }
+
+            modalPrice.textContent = price ? `$${price.toFixed(2)}` : 'Price not available';
         } else {
             modalPrice.textContent = 'Price not available';
         }
@@ -152,7 +168,7 @@ function openModal(event) {
     }
 }
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', async function(event) {
     const card = event.target.closest('.card');
     if (card) {
         const img = card.querySelector('img');

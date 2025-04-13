@@ -22,9 +22,6 @@ export async function fetchMultipleCardDetails(cards) {
 
     const baseQuery = queries.join(' or ');
     const requestUrl = `${API_URL}?q=${encodeURIComponent(baseQuery)}`;
-    
-    console.log('API Request URL:', requestUrl);
-    console.log('Decoded URL:', decodeURIComponent(requestUrl));
 
     try {
         const response = await fetch(requestUrl, {
