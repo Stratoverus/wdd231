@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul>
                 ${tradeData.cardsWanted.map(card => `<li>${card}</li>`).join('')}
             </ul>
-            <p><strong>Card Offered:</strong> ${tradeData.cardOffered}</p>
+            <p><strong>Card(s) Offered:</strong> ${tradeData.cardOffered}</p>
             <p><strong>Condition:</strong> ${tradeData.condition}</p>
             <p><strong>Comments:</strong> ${tradeData.comments}</p>
             <p><strong>Submitted:</strong> ${tradeData.date}</p>
