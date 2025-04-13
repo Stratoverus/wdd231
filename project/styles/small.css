@@ -469,8 +469,7 @@ main div {
     padding: 0 10px;
 }
 
-.guide-section ul, 
-.guide-section ol {
+.guide-section ul, .guide-section ol {
     text-align: left;
     margin: 15px 0;
     list-style-position: outside;
@@ -489,6 +488,213 @@ main div {
     padding: 2px 8px;
     transition: all 0.3s ease;
     display: inline-block;
+}
+
+/*Trade Page*/
+.selected-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.card-tag {
+    background-color: var(--color4);
+    color: var(--color6);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.card-tag:hover {
+    transform: translateY(-2px);
+}
+
+.remove-card {
+    background: none;
+    border: none;
+    color: var(--color6);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.remove-card:hover {
+    color: var(--color3);
+}
+
+.search-results {
+    position: absolute;
+    background-color: var(--color2);
+    border: 2px solid var(--color4);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+    max-width: 85%;
+    width: calc(100% - 2rem);
+    z-index: 1000;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: var(--color2);
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: var(--color4);
+    border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color3);
+}
+
+.search-result {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-result:hover {
+    background-color: var(--color4);
+}
+
+/* Trade Form Styles */
+.trade-form-container h2 {
+    text-align: center;
+    color: var(--color7);
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding: 10px;
+}
+
+#tradeForm {
+    max-width: 100%;
+    padding: 5px;
+}
+
+#nameEmail {
+    max-width: 500px;
+}
+
+#tradeForm fieldset {
+    border: 2px solid var(--color4);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--color8);
+}
+
+#tradeForm legend {
+    color: var(--color7);
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    padding: 0 1rem;
+}
+
+#tradeForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color6);
+    font-family: var(--paragraph-font);
+}
+
+#tradeForm input, #tradeForm select, #tradeForm textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--color4);
+    border-radius: 10px;
+    background-color: var(--color2);
+    color: var(--color6);
+    font-family: var(--paragraph-font);
+    transition: border-color 0.3s ease;
+}
+
+#tradeForm input:focus, #tradeForm select:focus, #tradeForm textarea:focus {
+    outline: none;
+    border-color: var(--color7);
+    box-shadow: 0 0 5px rgba(251, 192, 45, 0.5);
+}
+
+#tradeForm input:invalid, #tradeForm select:invalid {
+    border-color: var(--color3);
+}
+
+#tradeForm input:valid, #tradeForm select:valid {
+    border-color: var(--color4);
+}
+
+#tradeForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color4);
+    color: var(--color6);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--heading-font);
+    font-size: small;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    max-width: 300px;
+    justify-self: center;
+}
+
+#tradeForm button[type="submit"]:hover {
+    background-color: var(--color3);
+}
+
+/*Thank you page*/
+.thankYou {
+    text-align: center;
+}
+
+.thankYou h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+#tradeSummary {
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.thankYou h2 {
+    margin-bottom: 20px;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.thankYou ul {
+    list-style-position: inside;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 0;
+}
+
+.trade-summary {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /*Footer*/
